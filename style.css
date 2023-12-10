@@ -76,7 +76,6 @@ a {
   width: 15%;
 }
 
-
 /* FOOTER */
 
 #footer {
@@ -105,17 +104,31 @@ a {
 }
 
 
-.title {
+.intro {
   background-image: url(./img/title1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 900px;
 }
 
-.title_logo {
+.intro_logo {
   padding-top: 80px;
 }
 
-.title_name {
+.intro_name {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.intro_name h1 {
   font-size: 67px;
+  font-weight: 200;
+  color: #FFFFFF;
+}
+
+.advantages_grid {
+  display: grid;
+  grid-template-columns: 371px 371px 371px;
+  grid-template-rows: 283px 283px;
 }
