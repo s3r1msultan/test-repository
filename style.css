@@ -158,14 +158,12 @@ a {
 .advantages_grid {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   height: 565px;
   color: var(--primary-text-color);
   font-size: 22px;
   font-weight: 100;
-  margin-left: auto;
-  width: 80%;
 }
 
 .advantages_grid * {
@@ -189,6 +187,10 @@ a {
 
 .dark-grey {
   background-color: var(--gray-dark);
+}
+
+.black {
+  color: black;
 }
 
 /* FOOTER */
