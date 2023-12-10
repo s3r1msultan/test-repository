@@ -22,6 +22,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 ul {
   list-style-type: none;
 }
@@ -33,17 +37,55 @@ a {
 
 .header-inner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
   padding: 20px 20px;
+}
+
+.nav-link {
+  color: var(--secondary-text-color);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0%;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  background-color: black;
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .phone-number {
   background-color: var(--accent-color);
+  height: 100%;
+  padding: 20px 20px;
+  width: 15%;
 }
 
 .title {
   background-image: url(./img/title1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 900px;
 }
 
+.title_logo {
+  padding-top: 80px;
+}
+
+.title_name {
+  font-size: 67px;
+}
