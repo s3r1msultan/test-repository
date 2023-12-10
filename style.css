@@ -5,3 +5,26 @@
   --primary-text-color: #ffffff;
   --secondary-text-color: #000000;
 }
+
+html {
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.phone-number {
+  background-color: var(--accent-color);
+}
