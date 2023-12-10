@@ -5,3 +5,10 @@
   --primary-text-color: #ffffff;
   --secondary-text-color: #000000;
 }
+
+.container {
+  max-width: 100%;
+  width: 1460px;
+}
+
+.title_bg
