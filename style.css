@@ -78,6 +78,56 @@ a {
   padding: 20px 20px;
   width: 15%;
 }
+/* CONTACT */
+
+#contact {
+  display: flex;
+  height: 560px;
+}
+
+.map {
+  display: flex;
+  width: 75%;
+}
+
+.map iframe {
+  width: 66.6%;
+  border: 0;
+}
+
+.map-info {
+  background-color: var(--accent-color);
+  width: 33.3%
+}
+
+.phone-and-mail {
+  color: white;
+  width: 25%;
+}
+
+.phone-and-mail > * {
+  height: 50%;
+}
+
+.mail-info {
+  background-color: var(--gray-ligth);
+}
+
+.phone-info {
+  background-color: var(--gray-medium);
+}
+
+.contact-item {
+  padding: 20px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.contact-item img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
 
 /*INTRO*/
 
