@@ -82,56 +82,6 @@ a {
   padding: 20px 20px;
   width: 15%;
 }
-/* CONTACT */
-
-#contact {
-  display: flex;
-  height: 560px;
-}
-
-.map {
-  display: flex;
-  width: 75%;
-}
-
-.map iframe {
-  width: 66.6%;
-  border: 0;
-}
-
-.map-info {
-  background-color: var(--accent-color);
-  width: 33.3%;
-}
-
-.phone-and-mail {
-  color: white;
-  width: 25%;
-}
-
-.phone-and-mail > * {
-  height: 50%;
-}
-
-.mail-info {
-  background-color: var(--gray-ligth);
-}
-
-.phone-info {
-  background-color: var(--gray-medium);
-}
-
-.contact-item {
-  padding: 20px;
-  font-size: 1.2rem;
-  position: relative;
-}
-
-.contact-item img {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
 
 /*INTRO*/
 
@@ -195,6 +145,178 @@ a {
   background-color: var(--gray-dark);
 }
 
+/* SERVICES */
+
+.services-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.services-column {
+  width: 50%;
+}
+
+.services-title {
+  margin-bottom: 95px;
+  font-size: 4rem;
+  position: relative;
+}
+
+.services-title h2 {
+  font-weight: 300;
+}
+
+.services-title::after {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  width: 5%;
+  height: 6px;
+  background-color: black;
+}
+
+.service {
+  background-color: var(--secondary-text-color);
+}
+
+.gray-light {
+  background-color: var(--gray-ligth);
+}
+
+.gray-medium {
+  background-color: var(--gray-medium);
+}
+
+.gray-dark {
+  background-color: var(--gray-dark);
+}
+
+.service-title {
+  padding: 40px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-text-color);
+  transition: all 0.3s ease;
+}
+
+.service-title.active {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+}
+
+.service-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.service-button.active {
+  border-color: var(--dark-bg-color);
+}
+
+.line {
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: var(--primary-text-color);
+  border-color: var(--primary-text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.line:nth-of-type(1) {
+  transform: rotate(90deg);
+}
+
+.line:nth-of-type(1).active {
+  z-index: 1;
+  transform: rotate(180deg);
+  background-color: var(--dark-bg-color);
+  border-color: var(--dark-bg-color);
+}
+
+.service-description-wrapper {
+  background-color: #ffffff;
+  padding: 0 50px;
+}
+
+.service-description {
+  height: 0;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.service-description.active {
+  height: fit-content;
+  z-index: inherit;
+  opacity: 1;
+  padding: 50px 0;
+  transition: all 0.3s linear;
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  height: 560px;
+}
+
+.map {
+  display: flex;
+  width: 75%;
+}
+
+.map iframe {
+  width: 66.6%;
+  border: 0;
+}
+
+.map-info {
+  background-color: var(--accent-color);
+  width: 33.3%;
+}
+
+.phone-and-mail {
+  color: white;
+  width: 25%;
+}
+
+.phone-and-mail > * {
+  height: 50%;
+}
+
+.mail-info {
+  background-color: var(--gray-ligth);
+}
+
+.phone-info {
+  background-color: var(--gray-medium);
+}
+
+.contact-item {
+  padding: 20px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.contact-item img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
 /* FOOTER */
 
 #footer {
@@ -220,33 +342,4 @@ a {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.intro {
-  background-image: url(./img/title1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 900px;
-}
-
-.intro_logo {
-  padding-top: 80px;
-}
-
-.intro_name {
-  max-width: 500px;
-  width: 100%;
-  margin-top: 120px;
-}
-
-.intro_name h1 {
-  font-size: 67px;
-  font-weight: 200;
-  color: #ffffff;
-}
-
-.advantages_grid {
-  display: grid;
-  grid-template-columns: 371px 371px 371px;
-  grid-template-rows: 283px 283px;
 }
