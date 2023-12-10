@@ -15,8 +15,9 @@
 
 .container {
   max-width: 100%;
-  width: 1460px;
+  width: 1430px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 html {
@@ -25,6 +26,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #dfdfdf;
 }
 
 ul {
@@ -35,6 +37,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* HEADER */
 
 .header-inner {
   display: flex;
@@ -50,8 +54,8 @@ a {
 
 .nav-link {
   color: var(--secondary-text-color);
-  transition: all 0.2s ease;
   position: relative;
+  transition: width 0.2s ease;
 }
 
 .nav-link::after {
@@ -62,7 +66,7 @@ a {
   bottom: -10px;
   height: 2px;
   background-color: black;
-  transition: width 0.2s ease;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
@@ -75,7 +79,6 @@ a {
   padding: 20px 20px;
   width: 15%;
 }
-
 
 /* FOOTER */
 
@@ -104,6 +107,7 @@ a {
   gap: 10px;
 }
 
+/* MAIN */
 
 .title {
   background-image: url(./img/title1.jpg);
@@ -118,4 +122,109 @@ a {
 
 .title_name {
   font-size: 67px;
+}
+
+/* SERVICES */
+
+.services-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.services-column {
+  width: 50%;
+}
+
+.services-title {
+  margin-bottom: 95px;
+  font-size: 4rem;
+}
+
+.services-title h2 {
+  font-weight: 300;
+}
+
+.service {
+  background-color: var(--secondary-text-color);
+}
+
+.gray-light {
+}
+
+.gray-medium {
+}
+
+.gray-dark {
+}
+
+.service-title {
+  padding: 40px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-text-color);
+  transition: all 0.3s ease;
+}
+
+.service-title.active {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+}
+
+.service-description-wrapper {
+  background-color: #ffffff;
+  padding: 0 50px;
+}
+
+.service-description {
+  height: 0;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.service-description.active {
+  height: fit-content;
+  z-index: inherit;
+  opacity: 1;
+  padding: 50px 0;
+  transition: all 0.3s linear;
+}
+
+.service-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #5e5e5e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.service-button.active {
+  background-color: var(--secondary-text-color);
+  border-color: var(--secondary-text-color);
+}
+
+.line {
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: #5e5e5e;
+  border-color: #5e5e5e;
+  transition: transform 0.3s ease-in-out;
+}
+
+.line:nth-of-type(1) {
+  transform: rotate(90deg);
+}
+
+.line:nth-of-type(1).active {
+  transform: rotate(180deg);
 }
