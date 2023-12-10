@@ -3,6 +3,7 @@
   --main-bg-color: #d4d4d4;
   --secondary-bg-color: #e1e1e1;
   --primary-text-color: #ffffff;
+  --dark-bg-color: #171717;
   --secondary-text-color: #000000;
 }
 
@@ -74,6 +75,35 @@ a {
   padding: 20px 20px;
   width: 15%;
 }
+
+
+/* FOOTER */
+
+#footer {
+  font-size: 1.2rem;
+  color: var(--primary-text-color);
+  background-color: var(--dark-bg-color);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 100px 0;
+}
+
+.list-social {
+  margin-top: 50px;
+  display: flex;
+  gap: 33px;
+}
+
+.list-social img {
+  width: 36px;
+}
+
+.nav-list-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 
 .title {
   background-image: url(./img/title1.jpg);
