@@ -18,8 +18,9 @@
 
 .container {
   max-width: 100%;
-  width: 1460px;
+  width: 1430px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 html {
@@ -28,6 +29,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #dfdfdf;
 }
 
 ul {
@@ -38,6 +40,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* HEADER */
 
 .header-inner {
   display: flex;
@@ -53,8 +57,8 @@ a {
 
 .nav-link {
   color: var(--secondary-text-color);
-  transition: all 0.2s ease;
   position: relative;
+  transition: width 0.2s ease;
 }
 
 .nav-link::after {
@@ -65,7 +69,7 @@ a {
   bottom: -10px;
   height: 2px;
   background-color: black;
-  transition: width 0.2s ease;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
@@ -78,6 +82,190 @@ a {
   padding: 20px 20px;
   width: 15%;
 }
+
+/*INTRO*/
+
+#intro {
+  background-image: url(./img/title1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+}
+
+.intro_logo {
+  padding-top: 80px;
+}
+
+.intro_name {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.intro_name h1 {
+  font-size: 67px;
+  font-weight: 200;
+  color: #ffffff;
+}
+
+/*ADVANTAGES*/
+.advantages_grid {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 565px;
+  color: var(--primary-text-color);
+  font-size: 22px;
+  font-weight: 100;
+  margin-left: auto;
+  width: 80%;
+}
+
+.advantages_grid * {
+  padding: 50px 50px 50px 45px;
+}
+
+.advantages_info {
+  font-size: 34px;
+  font-weight: 600;
+  margin: 100px 0 100px 0;
+  width: 795px;
+}
+
+.bc-yellow {
+  background-color: #fcf48f;
+}
+
+.grey {
+  background-color: var(--gray-medium);
+}
+
+.dark-grey {
+  background-color: var(--gray-dark);
+}
+
+/* SERVICES */
+
+.services-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.services-column {
+  width: 50%;
+}
+
+.services-title {
+  margin-bottom: 95px;
+  font-size: 4rem;
+  position: relative;
+}
+
+.services-title h2 {
+  font-weight: 300;
+}
+
+.services-title::after {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  width: 5%;
+  height: 6px;
+  background-color: black;
+}
+
+.service {
+  background-color: var(--secondary-text-color);
+}
+
+.gray-light {
+  background-color: var(--gray-ligth);
+}
+
+.gray-medium {
+  background-color: var(--gray-medium);
+}
+
+.gray-dark {
+  background-color: var(--gray-dark);
+}
+
+.service-title {
+  padding: 40px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-text-color);
+  transition: all 0.3s ease;
+}
+
+.service-title.active {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+}
+
+.service-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.service-button.active {
+  border-color: var(--dark-bg-color);
+}
+
+.line {
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: var(--primary-text-color);
+  border-color: var(--primary-text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.line:nth-of-type(1) {
+  transform: rotate(90deg);
+}
+
+.line:nth-of-type(1).active {
+  z-index: 1;
+  transform: rotate(180deg);
+  background-color: var(--dark-bg-color);
+  border-color: var(--dark-bg-color);
+}
+
+.service-description-wrapper {
+  background-color: #ffffff;
+  padding: 0 50px;
+}
+
+.service-description {
+  height: 0;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.service-description.active {
+  height: fit-content;
+  z-index: inherit;
+  opacity: 1;
+  padding: 50px 0;
+  transition: all 0.3s linear;
+}
+
 
 /* PARTNERS */
 
@@ -123,7 +311,7 @@ a {
 
 .map-info {
   background-color: var(--accent-color);
-  width: 33.3%
+  width: 33.3%;
 }
 
 .phone-and-mail {
@@ -181,6 +369,7 @@ a {
   flex-direction: column;
   gap: 10px;
 }
+
 
 .intro {
   background-image: url(./img/title1.jpg);
