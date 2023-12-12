@@ -86,10 +86,12 @@ a {
 /*INTRO*/
 
 #intro {
+  position: relative;
   background-image: url(./img/title1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 900px;
+  z-index: -3;
 }
 
 .intro_logo {
@@ -108,41 +110,67 @@ a {
   color: #ffffff;
 }
 
-/*ADVANTAGES*/
-.advantages_grid {
+
+/* ADVANTAGE */
+
+.advantages-grid {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  height: 565px;
-  color: var(--primary-text-color);
-  font-size: 22px;
+  height: 560px;
+}
+
+.advantages-info {
+  width: 140%;
+  position: relative;
+  font-size: 48px;
+  top: -9px;
+}
+
+.advantages-grid-item {
+  padding: 36px;
+  font-size: 22px; 
+  color: #FFFFFF;
   font-weight: 100;
-  margin-left: auto;
-  width: 80%;
+} 
+
+.advantages-gray {
+  background-color: #424242;
+  opacity: #000000DB;
 }
 
-.advantages_grid * {
-  padding: 50px 50px 50px 45px;
+.advantages-gray-dark {
+  background-color: #000000DB;
 }
 
-.advantages_info {
-  font-size: 34px;
-  font-weight: 600;
-  margin: 100px 0 100px 0;
-  width: 795px;
+.number1 {
+  position: relative;
+  width: 100%; 
+  height: 100%;
+}
+
+.number1::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: calc(-100vw + 100%); /* Отступ слева для создания эффекта немного большего ширины */
+  width: 100vw;
+  height: calc(80px + 100%);
+  background-color: #FCF48F; /* Цвет заднего блока */
+  z-index: -1;
+}
+
+.advantages-info2 {
+  font-size: 48px;
+  font-weight: 700;
+  width: 1181px;
+  line-height: 60px;
+  margin: 120px 0;
 }
 
 .bc-yellow {
-  background-color: #fcf48f;
-}
-
-.grey {
-  background-color: var(--gray-medium);
-}
-
-.dark-grey {
-  background-color: var(--gray-dark);
+  background-color: #FCF48F;
 }
 
 /* SERVICES */
@@ -266,30 +294,142 @@ a {
   transition: all 0.3s linear;
 }
 
+/* PRICING */
+
+.pricing {
+  margin: 120px 0;
+}
+
+.pricing-title h2 {
+  font-size: 67px;
+  line-height: 73px;
+  font-weight: 300;
+  margin-bottom: 90px;
+  width: 680px;
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 50px;
+}
+
+.pricing-grid-item {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  background-color: #FFFFFF;
+  padding: 50px;
+}
+
+.price-number {
+  position: absolute;
+  bottom: 60px;
+  font-size: 104px;
+  color: #F2E970;
+  font-weight: 300;
+}
+
+.price-info {
+  font-size: 22px;
+  width: 829px;
+  margin-left: 80px;
+}
+
+.price {
+  font-size: 32px;
+}
 
 /* PARTNERS */
 
 #partners {
   display: flex;
-  height: 800px;
+  height: 100vh;
 }
 
 .partners-form {
+  position: relative;
   color: var(--primary-text-color);
   background-color: var(--dark-bg-color);
   width: 40%;
+  padding: 30px;
 }
 
-.partners-form > form {
+.partners-form form {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
+}
+
+#name, #telephone, #description{
+  display: block;
+  padding: 16px;
+  height: 10%;
+  background-color: inherit;
+  border: 1px var(--main-bg-color) solid;
+}
+
+#description {
+  height: 100px;
+  max-height: 30%;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+#submit {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 13%;
+  background-color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0;
+}
+
+#partners-title {
+  font-size: 2.5rem;
+  font-weight: 100;
+  width: 80%;
+}
+
+#partners-subtitle {
+  padding: 0 20px;
+  color: var(--gray-ligth);
 }
 
 .partners-picture {
-  width: 60%;
-  background-image: url(./img/find_solution.png);
+  background: url(./img/find_solution.png) center no-repeat;
   background-size: cover;
-  background-position: center;
+  width: 60%;
+}
+
+.partners-picture p {
+  position: relative;
+  font-size: 3rem;
+  color: var(--accent-color);
+  width: 80%;
+  text-align: end;
+  font-weight: 100;
+  border-bottom: 2px #646464A8 solid;
+  padding-bottom: 15px;
+  padding-top: 61%;
+}
+
+.partners-picture p::after {
+  position: absolute;
+  content: "";
+  bottom: -9px;
+  right: 0;
+  display: block;
+  width: 40%;
+  height: 7px;
+  background-color: #646464A8;
 }
 
 /* CONTACT */
