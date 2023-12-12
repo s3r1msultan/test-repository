@@ -78,6 +78,32 @@ a {
   padding: 20px 20px;
   width: 15%;
 }
+
+/* PARTNERS */
+
+#partners {
+  display: flex;
+  height: 800px;
+}
+
+.partners-form {
+  color: var(--primary-text-color);
+  background-color: var(--dark-bg-color);
+  width: 40%;
+}
+
+.partners-form > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.partners-picture {
+  width: 60%;
+  background-image: url(./img/find_solution.png);
+  background-size: cover;
+  background-position: center;
+}
+
 /* CONTACT */
 
 #contact {
@@ -155,7 +181,6 @@ a {
   flex-direction: column;
   gap: 10px;
 }
-
 
 .intro {
   background-image: url(./img/title1.jpg);
