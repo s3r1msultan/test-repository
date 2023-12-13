@@ -342,6 +342,69 @@ a {
   font-size: 32px;
 }
 
+/* REQUEST FORM */
+
+#request-form-section {
+  position: relative;
+  padding: 100px 0 160px 0;
+}
+
+#request-form-section::after {
+  content: "";
+  background-color: #FFFFFF;
+  opacity: 26%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.request-form-info {
+  font-size: 48px;
+  font-weight: 100;
+  width: 660px;
+  margin-bottom: 45px;
+}
+
+.request-form-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  height: 100px;
+}
+
+#request-button{
+  height: 100%;
+  width: 100%;
+  border: 0;
+  background-color: #FCF48F;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#request-button:hover {
+  background-color: #dad379;
+}
+
+#request-form label {
+  position: relative;
+  top: 30px;
+  color: #5B5B5B;
+}
+
+#request-input-name, #request-input-number {
+  font-size: 22px;  
+  font-weight: 100;
+  border: 2px solid #BEBEBE;
+  outline: none;
+  padding-left: 35px;
+}
+
+
+
+
 /* PARTNERS */
 
 #partners {
