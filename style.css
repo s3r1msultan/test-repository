@@ -41,6 +41,32 @@ a {
   text-decoration: none;
 }
 
+.section-title {
+  margin-bottom: 95px;
+  position: relative;
+}
+
+.section-title h2 {
+  width: 50%;
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  width: 5%;
+  height: 6px;
+  background-color: black;
+}
+
+.logo {
+  width: 310px;
+  height: 60px;
+}
+
 /* HEADER */
 
 .header-inner {
@@ -185,25 +211,6 @@ a {
 
 .services-column {
   width: 50%;
-}
-
-.services-title {
-  margin-bottom: 95px;
-  font-size: 4rem;
-  position: relative;
-}
-
-.services-title h2 {
-  font-weight: 300;
-}
-
-.services-title::after {
-  position: absolute;
-  content: "";
-  bottom: -4px;
-  width: 5%;
-  height: 6px;
-  background-color: black;
 }
 
 .service {
@@ -402,8 +409,106 @@ a {
   padding-left: 35px;
 }
 
+/* TEAM */
 
+#team-title-block {
+  background-color: #FFFFFF;
+  padding: 100px 0;
+}
 
+#team-main-block {
+  background-color: #272727;
+}
+
+#team {
+  margin-bottom: 80px;
+}
+
+#team-main {
+  position: relative;
+  display: flex;
+}
+
+#team-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 66px 0;
+  width: 50%;
+}
+
+#team-text {
+  font-size: 1.25rem;
+  color: var(--primary-text-color);
+}
+
+#team-text > * {
+  font-weight: 400;
+}
+
+#team-text h4 {
+  font-size: 1.75rem;
+  margin-bottom: 63px;
+  width: 200px;
+}
+
+#team-text p {
+  font-size: 1.25rem;
+  color: #898989;
+}
+
+#team-text span {
+  color: var(--accent-color);
+}
+
+#team-photo {
+  position: relative;
+  height: 1000px;
+}
+
+#team-photo h2 {
+  color: var(--accent-color);
+  font-weight: 200;
+  font-size: 4rem;
+  position: absolute;
+  top: 52%;
+  left: -30%;
+}
+
+#team-members {
+  position: absolute;
+  right: -250px;
+  min-width: 250px;
+  width: 250px;
+}
+
+.team-member {
+  background-color: #272727;
+  border: 1px var(--gray-ligth) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  transition: 0.1s linear;
+}
+
+.team-member img {
+  outline: 3px solid #272727;
+  outline-offset: -2px;
+  border-radius: 100%;
+}
+
+.team-member:hover {
+  background-color: var(--gray-ligth);
+}
+
+.selected-member {
+  background-color: var(--accent-color);
+}
+
+.selected-member:hover {
+  background-color: var(--accent-color);
+}
 
 /* PARTNERS */
 

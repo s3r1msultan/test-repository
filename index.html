@@ -34,11 +34,11 @@
       <div class="header-inner">
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-link"><a href="#">Главная</a></li>
-            <li class="nav-link"><a href="#">Услуги</a></li>
-            <li class="nav-link"><a href="#">Кейсы</a></li>
-            <li class="nav-link"><a href="#">Команда</a></li>
-            <li class="nav-link"><a href="#">Партнеры</a></li>
+            <li class="nav-link"><a href="#intro">Главная</a></li>
+            <li class="nav-link"><a href="#services">Услуги</a></li>
+            <li class="nav-link"><a href="#cases">Кейсы</a></li>
+            <li class="nav-link"><a href="#team">Команда</a></li>
+            <li class="nav-link"><a href="#partners">Партнеры</a></li>
             <li class="nav-link"><a href="#contact">Контакты</a></li>
           </ul>
         </nav>
@@ -93,7 +93,7 @@
       <section id="services">
         <div class="container">
           <div class="services-inner">
-            <div class="services-title">
+            <div class="section-title">
               <h2>Услуги</h2>
               <hr />
             </div>
@@ -290,6 +290,63 @@
           </form>
         </div>
       </section>
+      <!-- TODO: ADD MEDIA QUERY SO MEMBERS
+        WILL BE ON TOP OF THE ALEXANDER WHEN SCREEN IS SMALL -->
+      <section id="team">
+        <div id="team-title-block">
+          <div class="container">
+            <div class="section-title">
+              <h2>Команда юридической защиты бизнеса</h2>
+              <hr />
+            </div>
+          </div>
+        </div>
+        <div id="team-main-block">
+          <div class="container">
+            <div id="team-main">
+              <div id="team-info">
+                <img class="logo" src="./img/logo.svg" alt="logo"/>
+                <div id="team-text">
+                  <h4>Руководитель юридического отдела</h4>
+                  <p>Главный юрист, эксперт в области корпоративного права. 
+                    15 лет курировал правовые вопросы в компаниях федерального значения.
+                     Возглавлял юридическую службу международной компании ПАО «Метафракс»,
+                      реализовал несколько амбициозных проектов, в том числе международных.
+                    <br><br>
+                    <span>Гарантирует реалистическую оценку перспективам дела и защиту вашего бизнеса.</span></p>
+                </div>
+              </div>
+              <div id="team-photo">
+                <img src="./img/alexander.jpg" alt="Team Member Photo"/>
+                <h2>Александр Корнев</h2>
+              </div>
+              <div id="team-members">
+                <div class="team-member selected-member">
+                  <img src="./img/member-1.jpg" alt="Team member photo"/>
+                </div>
+                <div class="team-member">
+                  <img src="./img/member-2.jpg" alt="Team member photo"/>
+                </div>
+                <div class="team-member">
+                  <img src="./img/member-3.jpg" alt="Team member photo"/>
+                </div>
+                <div class="team-member">
+                  <img src="./img/member-4.jpg" alt="Team member photo"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cases">
+        <div class="container">
+          <div class="section-title">
+            <h2>Кейсы</h2>
+            <hr />
+          </div>
+        </div>
+      </section>
 
       <section id="partners">
         <div class="partners-form">
@@ -378,24 +435,16 @@
       </section>
       <nav class="nav">
         <ul class="nav-list-footer">
-          <li><a href="#">Главная</a></li>
-          <!-- TODO: add href to corresponding section -->
-          <li><a href="#">Услуги</a></li>
-          <!-- TODO: add href to corresponding section -->
-          <li><a href="#">Кейсы</a></li>
-          <!-- TODO: add href to corresponding section -->
-          <li><a href="#">Команда</a></li>
-          <!-- TODO: add href to corresponding section -->
-          <li><a href="#">Партнеры</a></li>
-          <!-- TODO: add href to corresponding section -->
-          <li><a href="#">Контакты</a></li>
-          <!-- TODO: add href to corresponding section -->
+          <li><a href="#intro">Главная</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#cases">Кейсы</a></li>
+          <li><a href="#team">Команда</a></li>
+          <li><a href="#partners">Партнеры</a></li>
+          <li><a href="#contact">Контакты</a></li>
         </ul>
       </nav>
       <div></div>
-      <!--Just for good display-->
       <p class="conf-politics"><a href="#">Политика конфиденциальности</a></p>
-      <!-- TODO: add href? -->
     </footer>
     <script>
       //
@@ -420,6 +469,17 @@
           });
         }
       );
+
+      Array.from(document.querySelectorAll(".team-member")).map(
+        (member) => {
+          member.addEventListener("click", () => {
+            document.querySelectorAll(".team-member").forEach(element => {
+              element.classList.remove("selected-member");
+            });
+            member.classList.add("selected-member");
+          })
+        }
+      )
     </script>
   </body>
 </html>
